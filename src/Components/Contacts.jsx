@@ -8,8 +8,8 @@ const Contacts = (props) => {
         <div>
             <Container>
                 <Row>
-                {props.contactDetails.map((contact) => {
-                        return <Contact contactInfo={contact} />
+                    {props.contactDetails.map((contact, index) => {
+                        return <Contact contactInfo={contact} key={index} deleteContact={props.deleteContact} updateContact={props.updateContact} />
                     })}
                 </Row>
             </Container>
